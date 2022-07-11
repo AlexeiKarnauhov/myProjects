@@ -9,7 +9,7 @@ def pdf_to_mp3(file_path='test.pdf', language='en'):
     if Path(file_path).is_file() and Path(file_path).suffix == '.pdf':
 
         print(f'[+] Original file: {Path(file_path).name}')
-        print('[+]Processing...')
+        print(f'[+] Processing ...')
 
         with pdfplumber.PDF(open(file=file_path, mode='rb')) as pdf:
             pages = [page.extract_text() for page in pdf.pages]
